@@ -25,7 +25,7 @@ void incrementAttempts(attempts value){
 // Get order size
 void getOrderSize() {
 	printf("Getting Order Size");
-
+}
 // Payment processing
 void getPymntMethod() {
 	printf("Getting Payment Method");
@@ -37,6 +37,10 @@ void chargeClient() {
 
 void paymentRejected() {
 	printf("Payment Rejected");
+}
+
+void refund() {
+	printf("Client has been refunded");
 }
 
 // Manufactoring
