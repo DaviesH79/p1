@@ -28,6 +28,7 @@ void printStateName(void)
     printf("\n");
 }
 
+// set next state after event, print current state
 void handle_event( event current_event )
 {
     state_t* next_state;
@@ -35,18 +36,24 @@ void handle_event( event current_event )
     next_state = NULL;
     switch( current_event ) // exit current_state and have the approprite effect
     {
-        case CLOSE_BUTTON_PRESSED:
-            next_state = current_state->close_button_pressed();
+        case ORDER_RECEIVED:
+            next_state = current_state->order_received();
             break;
-        case CLOSED_DETECTED:
-            next_state = current_state->closed_detected();
+        case VALID_PAYMENT:
+            next_state = current_state->valid_payment();
             break;
-        case OPEN_BUTTON_PRESSED:
-            next_state = current_state->open_button_pressed();
+        case MANUFACTURE_COMPLETED:
+            next_state = current_state->manufacture_completed();
             break;
-        case OPENED_DETECTED:
-            next_state = current_state->opened_detected();
+        case SHIPMENT_ARRIVED:
+            next_state = current_state->shipment_arrived();
             break;
+				case INVALID_PAYMENT:
+						next_state = current_state->invalid_payment();
+				case MANUFACTURE_FAILED:
+						next_state = current_state->manufactured_failed();
+				case SHIPMENT_LOST:
+						next_state = current_state->shipment_lost();
     }    
 
     if (next_state != NULL)
