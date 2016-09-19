@@ -12,6 +12,7 @@
 
 #include <stdlib.h>
 #include "state.h"
+#include "system.h"
 
 // Declare all of the states used in the state model.
 // They are extern because they are defined (i.e., the  memory is 

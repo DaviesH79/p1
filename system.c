@@ -10,8 +10,8 @@
 #include "system.h"
 #include <stdio.h>
 
-// This file contains all the functions that will be used
-// during transitions or entry/exit 
+// This file contains all  effects on the transitions (all the functions that will be used
+// during transitions or entry/exit) 
 
 // Attempts
 void resetAttempts(attempts value){

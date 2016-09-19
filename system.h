@@ -8,7 +8,7 @@
 // ---------------------------------------------------------------------------------- 
 
 #ifndef system_h
-#define hardware_h
+#define system_h
 
 // Events.
 typedef enum
