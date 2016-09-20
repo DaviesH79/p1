@@ -3,7 +3,7 @@
 // Date       : 09/22/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-//
+// Group			: 3
 // File Name  : statemodel.c 
 // ---------------------------------------------------------------------------------- 
 
@@ -51,10 +51,13 @@ void handle_event( event current_event )
             break;
 				case INVALID_PAYMENT:
 						next_state = current_state->invalid_payment();
+						break;
 				case MANUFACTURE_FAILED:
 						next_state = current_state->manufacture_failed();
+						break;
 				case SHIPMENT_LOST:
 						next_state = current_state->shipment_lost();
+						break;
     }    
 
     if (next_state != NULL)

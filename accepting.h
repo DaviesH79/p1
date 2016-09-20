@@ -3,7 +3,7 @@
 // Date       : 09/22/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-//
+// Group			: 3
 // File Name  : accepting.h
 // ---------------------------------------------------------------------------------- 
 

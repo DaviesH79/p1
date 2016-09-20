@@ -3,7 +3,7 @@
 // Date       : 09/22/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-//
+// Group			: 3
 // File Name  : processing.c
 // ---------------------------------------------------------------------------------- 
 
@@ -27,7 +27,7 @@ state_t processing = {
 // Call the valid payment handler, return address of manufacturing
 state_t* valid_payment()
 {
-	return &manufacturing;
+ 	return &manufacturing;
 } 
 
 // Call the invalid payment handler
@@ -38,6 +38,7 @@ state_t* invalid_payment()
 	paymentRejected();
 	return &accepting;
 }
+
 // Set the action when entering the processing state
 static void entry_to_processing()
 {
