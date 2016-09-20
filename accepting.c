@@ -21,6 +21,7 @@ state_t accepting = {
 		default_event_handler,  // manufacture_failed
 		default_event_handler,  // shipment_arrived
 		default_event_handler,  // shipment_lost
+		entry_to_accepting			// entry_to
 };
 
 // call the order received handler, exit from opening,
@@ -33,7 +34,9 @@ state_t* order_received()
 	return &processing;
 }
 
-
+static void entry_to_accepting()
+{
+}
 	 	 
 
 

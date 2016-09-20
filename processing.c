@@ -36,12 +36,11 @@ state_t* invalid_payment()
 {
 	incrementAttempts(0);
 	paymentRejected();
+	return &accepting;
 }
-
 // Set the action when entering the processing state
 static void entry_to_processing()
 {
 	getPymntMethod();
 }	
-
 

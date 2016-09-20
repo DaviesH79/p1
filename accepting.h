@@ -16,5 +16,6 @@
 // when in the accepting state
 
 static state_t* order_received();
+static void entry_to_accepting();
 
 #endif

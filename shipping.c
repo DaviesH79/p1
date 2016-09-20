@@ -13,7 +13,7 @@
 #include "statemodel.h" // For the other states
 
 // Create an object of the shipping state
-state_t manufacturing = {
+state_t shipping = {
 		default_event_handler,  // order_received
 		default_event_handler, 	// valid_payment
 		default_event_handler,	// invalid_payment

@@ -24,48 +24,48 @@ void incrementAttempts(attempts value){
 
 // Get order size
 void getOrderSize() {
-	printf("Getting Order Size");
+	printf("Getting Order Size\n");
 }
 // Payment processing
 void getPymntMethod() {
-	printf("Getting Payment Method");
+	printf("Getting Payment Method\n");
 }
 
 void chargeClient() {
-	printf("Client has been charged");
+	printf("Client has been charged\n");
 }
 
 void paymentRejected() {
-	printf("Payment Rejected");
+	printf("Payment Rejected\n");
 }
 
 void refund() {
-	printf("Client has been refunded");
+	printf("Client has been refunded\n");
 }
 
 // Manufactoring
 void dispatchFactoryLines() {
-	printf("Dispatching Factory Lines");
+	printf("Dispatching Factory Lines\n");
 }
 
 void shutDownFactoryLines() {
-	printf("Shutting Down Factory Lines");
+	printf("Shutting Down Factory Lines\n");
 }
 
 // Shipping
 void getAddress() {
-	printf("Getting Ship-To Address");
+	printf("Getting Ship-To Address\n");
 }
 
 void startWarranty() {
-	printf("Warranty has started");
+	printf("Warranty has started\n");
 }
 
 // Update status
 void updateStats(status value) {
-	if		  (value == FAIL) printf("Updating Statistics with order FAIL.");
-	else if (value == LOST) printf("Updating Statistics with order LOST.");
-	else if (value == DONE) printf("Updating Statistics with order DONE.");
+	if		  (value == FAIL) printf("Updating Statistics with order FAIL.\n");
+	else if (value == LOST) printf("Updating Statistics with order LOST.\n");
+	else if (value == DONE) printf("Updating Statistics with order DONE.\n");
 }
 
 	

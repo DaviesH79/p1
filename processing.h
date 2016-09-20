@@ -13,7 +13,7 @@
 #include "state.h"
 
 
-// Declare all the functions thta can be performed
+// Declare all the functions that can be performed
 // when in the processing state
 
 static state_t* valid_payment();

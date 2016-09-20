@@ -35,10 +35,12 @@ state_t* manufacture_completed()
 }
 
 // Call the manufacture failed handler, exit from, and update the status
+//TODO this function is returning to the manufacturing state... why?
 state_t* manufacture_failed()
 {
 	exit_from_manufacturing();
 	updateStats(FAIL);
+	return &accepting;
 }
 
 // Set the action when entering the manufacturing state
