@@ -18,8 +18,8 @@ void resetAttempts(attempts value){
 	value = 0;
 }
 
-void incrementAttempts(attempts value){
-	value++;
+int incrementAttempts(int value){
+	return value++;
 }
 
 // Get order size

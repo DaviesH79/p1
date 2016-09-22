@@ -63,7 +63,7 @@ void handle_event( event current_event )
     if (next_state != NULL)
     {
         current_state = next_state; // Change states
-        current_state->entry_to();  // enter the new state
         printStateName();
+        current_state->entry_to();  // enter the new state
     }
 }

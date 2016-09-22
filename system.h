@@ -50,7 +50,7 @@ void chargeClient();
 
 void paymentRejected();
 
-void incrementAttempts(attempts value); 
+int incrementAttempts(int value); 
 
 void refund();
 

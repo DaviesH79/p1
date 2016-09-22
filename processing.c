@@ -11,6 +11,7 @@
 #include "system.h"			// For transition and entry/exit functions
 #include "state.h"			// For the event handlers
 #include "statemodel.h" // For the other states
+#include <stdio.h>
 
 // Create an object of the processing state
 state_t processing = {
@@ -23,10 +24,12 @@ state_t processing = {
 		default_event_handler,  // shipment_lost
 		entry_to_processing,		// entry_to
 };
+	
 
 // Call the valid payment handler, return address of manufacturing
 state_t* valid_payment()
 {
+	resetAttempts(0);
  	return &manufacturing;
 } 
 
@@ -34,11 +37,17 @@ state_t* valid_payment()
 // TODO implement logic for incrementAttempts and paymentRejection	
 state_t* invalid_payment()
 {
-	incrementAttempts(0);
-	paymentRejected();
-	return &accepting;
+	static int value = 0;		// default attempts
+	printf("value = %d\n", value);
+		if (value > 2) 
+		{
+ 			paymentRejected();
+			return &accepting;
+		} else {
+			value++;
+			return &processing;
+		}
 }
-
 // Set the action when entering the processing state
 static void entry_to_processing()
 {
