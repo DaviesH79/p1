@@ -11,11 +11,13 @@
 #include <stdlib.h>
 #include "system.h"
 #include "statemodel.h"
+#include <time.h>       // Time for random generator
 
 int 
 main()
 {
 
+  srand(time(NULL));
 	printStateName();		// to print initial state
 	event new_event;		// event type variable to hold new event
 	char key;						// variable to hold input

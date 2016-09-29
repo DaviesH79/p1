@@ -12,6 +12,8 @@
 #include "state.h"
 #include "statemodel.h" // For the other states
 
+
+
 // Create the object of the accepting state
 state_t accepting = {
 		order_received,					// order_received

@@ -1,17 +1,25 @@
 //-----------------------------------------------------------------------------------
 // Assignment : Phase One
-// Date       : 09/22/2016
+// Date       : 10/07/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-// Group			: 3
+// Group			: 4
 // File Name  : system.c
 // ---------------------------------------------------------------------------------- 
 
 #include "system.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 // This file contains all  effects on the transitions (all the functions that will be used
 // during transitions or entry/exit) 
+
+int order_size;
+
+typedef struct {
+	int capacity, 
+			duration;
+} args_t;
 
 // Attempts
 void resetAttempts(attempts value){
@@ -24,7 +32,8 @@ int incrementAttempts(int value){
 
 // Get order size
 void getOrderSize() {
-	printf("Getting Order Size\n");
+	order_size = random() % (2000 + 1 - 1000) + 1000;
+	printf("Got an order size = %d items\n", order_size);
 }
 // Payment processing
 void getPymntMethod() {
@@ -43,9 +52,13 @@ void refund() {
 	printf("Client has been refunded\n");
 }
 
-// Manufactoring
-void dispatchFactoryLines() {
+// Manufactoring - there are five manufactoring lines
+// Generate capacity and duration to pass as thread argument
+void * dispatchFactoryLines(void * p) {
 	printf("Dispatching Factory Lines\n");
+	args_t * x;
+	x->capacity = random() % (50 + 1 - 10) + 10;
+	x->duration = random() % (5 + 1 - 1) + 1;
 }
 
 void shutDownFactoryLines() {

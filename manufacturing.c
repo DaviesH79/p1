@@ -1,9 +1,9 @@
 //-----------------------------------------------------------------------------------
-// Assignment : Phase One
-// Date       : 09/22/2016
+// Assignment : Phase Two: Threads
+// Date       : 10/07/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-// Group			: 3
+// Group			: 4
 // File Name  : manufacturing.c
 // ---------------------------------------------------------------------------------- 
 
@@ -11,6 +11,7 @@
 #include "system.h"			// For transition and entry/exit functions
 #include "state.h"			// For the event handlers
 #include "statemodel.h" // For the other states
+#include <stdio.h>
 
 // Create an object of the manufacturing state
 state_t manufacturing = {
@@ -24,6 +25,9 @@ state_t manufacturing = {
 		entry_to_manufacturing, // entry_to
 		exit_from_manufacturing,// exit_from
 };
+
+extern int order_size;
+extern int args_t;
 
 // Call the manufacture completed handler, exit from,
 // return address of shipping
@@ -44,9 +48,21 @@ state_t* manufacture_failed()
 }
 
 // Set the action when entering the manufacturing state
+// Create five threads to represent manufacturing lines
 static void entry_to_manufacturing()
 {
-	dispatchFactoryLines();
+	//dispatchFactoryLines();
+	pthread_t thread;
+
+	int i, lines;
+	lines = 5;
+
+	for(i = 0; i < lines; i++)
+	{
+	 	x = malloc(sizeof (args_t));
+		pthread_create(&thread, NULL, dispatchFactoryLines, (void *) x);
+	free(x);
+	printf("Order Size = %d\n", order_size);
 }
 
 // Set the action when exiting the manufacturing state
