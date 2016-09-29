@@ -1,14 +1,15 @@
 //-----------------------------------------------------------------------------------
 // Assignment : Phase One
-// Date       : 09/22/2016
+// Date       : 10/07/2016
 //
 // Author     : Holly Davies davieshf@dukes.jmu.edu, Justin Hux huxdr@dukes.jmu.edu
-// Group			: 3
+// Group			: 4
 // File Name  : system.c
 // ---------------------------------------------------------------------------------- 
 
 #include "system.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 // This file contains all  effects on the transitions (all the functions that will be used
 // during transitions or entry/exit) 
@@ -23,9 +24,10 @@ int incrementAttempts(int value){
 }
 
 // Get order size
-void getOrderSize() {
-	printf("Getting Order Size\n");
-}
+//void getOrderSize() {
+//	printf("Got an order size = %d items\n", order_size);
+//}
+
 // Payment processing
 void getPymntMethod() {
 	printf("Getting Payment Method\n");
@@ -43,10 +45,11 @@ void refund() {
 	printf("Client has been refunded\n");
 }
 
-// Manufactoring
-void dispatchFactoryLines() {
-	printf("Dispatching Factory Lines\n");
-}
+// Manufactoring - there are five manufactoring lines
+// Generate capacity and duration to pass as thread argument
+//void * dispatchFactoryLines(void * p) {
+//	printf("Dispatching Factory Lines\n");
+//}
 
 void shutDownFactoryLines() {
 	printf("Shutting Down Factory Lines\n");

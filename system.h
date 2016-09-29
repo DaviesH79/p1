@@ -55,7 +55,7 @@ int incrementAttempts(int value);
 void refund();
 
 // Functions for manufactoring lines
-void dispatchFactoryLines();
+void * dispatchFactoryLines(void *);
 
 void shutDownFactoryLines();
 

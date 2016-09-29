@@ -12,6 +12,8 @@
 #include "state.h"
 #include "statemodel.h" // For the other states
 
+int order_size;
+
 // Create the object of the accepting state
 state_t accepting = {
 		order_received,					// order_received
@@ -38,5 +40,8 @@ static void entry_to_accepting()
 {
 }
 	 	 
+void getOrderSize() {
+	order_size = random() % (2000 + 1 - 1000) + 1000;
+}
 
 

@@ -1,5 +1,5 @@
 driver: driver.o statemodel.o state.o system.o accepting.o processing.o manufacturing.o shipping.o
-				gcc driver.o statemodel.o state.o system.o accepting.o processing.o manufacturing.o shipping.o -o driver
+				gcc -pthread driver.o statemodel.o state.o system.o accepting.o processing.o manufacturing.o shipping.o -o driver
 
 driver.o: driver.c system.h statemodel.h
 				gcc -c driver.c
@@ -19,7 +19,7 @@ accepting.o: accepting.c accepting.h system.h state.h statemodel.h
 processing.o: processing.c processing.h system.h state.h statemodel.h 	
 				gcc -c processing.c
 
-manufacturing.o: manufacturing.c manufacturing.h system.h state.h statemodel.h
+manufacturing.o: manufacturing.c manufacturing.h  system.h state.h statemodel.h
 				gcc -c manufacturing.c
 
 shipping.o: shipping.c shipping.h system.h state.h statemodel.h
