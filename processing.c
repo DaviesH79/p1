@@ -38,7 +38,6 @@ state_t* valid_payment()
 state_t* invalid_payment()
 {
 	static int value = 0;		// default attempts
-	printf("value = %d\n", value);
 		if (value > 2) 
 		{
  			paymentRejected();
