@@ -14,13 +14,6 @@
 // This file contains all  effects on the transitions (all the functions that will be used
 // during transitions or entry/exit) 
 
-int order_size;
-
-typedef struct {
-	int capacity, 
-			duration;
-} args_t;
-
 // Attempts
 void resetAttempts(attempts value){
 	value = 0;
@@ -31,10 +24,10 @@ int incrementAttempts(int value){
 }
 
 // Get order size
-void getOrderSize() {
-	order_size = random() % (2000 + 1 - 1000) + 1000;
-	printf("Got an order size = %d items\n", order_size);
-}
+//void getOrderSize() {
+//	printf("Got an order size = %d items\n", order_size);
+//}
+
 // Payment processing
 void getPymntMethod() {
 	printf("Getting Payment Method\n");
@@ -54,12 +47,9 @@ void refund() {
 
 // Manufactoring - there are five manufactoring lines
 // Generate capacity and duration to pass as thread argument
-void * dispatchFactoryLines(void * p) {
-	printf("Dispatching Factory Lines\n");
-	args_t * x;
-	x->capacity = random() % (50 + 1 - 10) + 10;
-	x->duration = random() % (5 + 1 - 1) + 1;
-}
+//void * dispatchFactoryLines(void * p) {
+//	printf("Dispatching Factory Lines\n");
+//}
 
 void shutDownFactoryLines() {
 	printf("Shutting Down Factory Lines\n");
